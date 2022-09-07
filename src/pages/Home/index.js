@@ -2,11 +2,14 @@ import { useEffect, useState } from "react"
 import api from "../../services/api"
 import { Link } from "react-router-dom"
 import "./home.css"
+
+
 import {toast} from 'react-toastify'
 
 function Home() {
     const [filmes, setFilmes] = useState([])
     const [loading, setLoading] = useState(true)
+    // const [pesquisar,setPesquisa] = useState("testes")
 
     //toda vez que carregar a página, ira procurar os filmes na API
     useEffect(() => {
@@ -23,6 +26,8 @@ function Home() {
             // console.log(response.data.results.slice(0,10))
             setFilmes(response.data.results)
             setLoading(false)
+          
+            
         }
         loadFilmes()
     }, [])
@@ -52,13 +57,16 @@ function Home() {
             </div>
         )
     }
+   
+
+
 
     return (
         <div className="container">
             
             <div className="lista-filmes">
-
-                {filmes.map((filme) => {
+            
+         {filmes.map((filme,pesquisador) => {
                     return (
 
                             <article key={filme.id}>
@@ -67,6 +75,7 @@ function Home() {
                                 <Link to={`/filme/${filme.id}`}>Acessar</Link> 
                                 
                             </article>
+                            
                     )
                 })}
 
