@@ -6,6 +6,9 @@
 .pnp.js
 tes.js
 
+#desenvolvimento
+/public
+/src
 # testing
 /coverage
 
