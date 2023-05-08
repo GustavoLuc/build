@@ -66,7 +66,7 @@ function Home() {
             
             <div className="lista-filmes">
             
-         {filmes.map((filme,pesquisador) => {
+         {filmes.map((filme) => {
                     return (
 
                             <article key={filme.id}>

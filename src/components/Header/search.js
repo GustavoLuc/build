@@ -6,8 +6,8 @@ const [pesquisar,setPesquisa] = useState("")
 
 
 return (
-    <div className="texto">
-        <h1>{pesquisar}</h1>
+    <div className="texto" >
+        <h1 >{pesquisar}</h1>
     <input className="pesquisa" onChange={(e)=>setPesquisa(e.target.value)}  type="search"  >
     </input>
     

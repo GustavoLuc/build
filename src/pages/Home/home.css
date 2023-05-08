@@ -79,3 +79,7 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+.pesquisa{
+    display:none
+}
